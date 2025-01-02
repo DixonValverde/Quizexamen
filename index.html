@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Fútbol🧐⚽</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Quiz de Fútbol</h1>
+    <p>¡Demuestra cuanto sabes de futbol de las siguiente 5 quiz que puedes realizar bruh! tienes 1:40 por cada seccion y pregunta como tiempo limite!!</p>
+  </header>
+  <main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <section id="competitions-section">
+      <h2>⚡Competiciones⚡</h2>
+      <article>
+        <h3>⚽Champions League⚽</h3>
+        <p>La máxima competición de clubes en Europa. ¿Cuánto sabes de sus equipos, goles y momentos históricos?</p>
+        <button onclick="showDifficultyOptions('champions')">Seleccionar Dificultad</button>
+      </article>
+      <article>
+        <h3>🌎Mundial🌎</h3>
+        <p>El torneo más grande de selecciones nacionales. ¿Eres un experto en copas mundiales?</p>
+        <button onclick="showDifficultyOptions('mundial')">Seleccionar Dificultad</button>
+      </article>
+      <article>
+        <h3>🥶Copa América y Europa🐫</h3>
+        <p>Las dos competiciones continentales más importantes del mundo un test 2 en 1 eres capaz de responder todo a tiempo con este nivel..</p>
+        <button onclick="showDifficultyOptions('copa')">Seleccionar Dificultad</button>
+      </article>
+      <article>
+        <h4>Copa libertadores y sudamericana</h4>
+        <p>Las dos competiciones de america del sur y de las mas antiguas!! esto es un verdadero reto esto es dificil que los demas aceptas el desafio..¿? </p>
+        <button onclick="showDifficultyOptions('Sudamerica')">Seleccionar Dificultad</button>
+      </article>
+    </section>
+
+   
+
+    <section id="difficulty-section" style="display:none;">
+      <h2>Selecciona la Dificultad</h2>
+      <button onclick="startQuiz('facil')">Fácil</button>
+      <button onclick="startQuiz('media')">Media</button>
+      <button onclick="startQuiz('dificil')">Difícil</button>
+    </section>
+    <section id="quiz-section" style="display:none;">
+      <h2 id="quiz-title"></h2>
+      <div id="questions-container"></div>
+      <button id="submit-quiz" onclick="calculateResult()">Terminar Quiz</button>
+    </section>
+    <section id="result-section" style="display:none;">
+      <h2>Resultados</h2>
+      <p id="result-message"></p>
+      <button onclick="restartQuiz()">Volver al inicio</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <!-- Digital Clock Timer -->
+<div id="digital-clock-timer">
+  <span id="minutes">01</span>:<span id="seconds">40</span>
+</div>
+<div class="copyright">
+  <p>&copy; 2025 Boris Valverde BDVAR. Todos los derechos reservados.</p>
+</div>
+
+</body>
+</html>
